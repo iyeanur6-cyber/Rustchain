@@ -1,28 +1,30 @@
 # Mine Your Grandma's Computer: Vintage Hardware Setup Guide
 
-Got an old laptop gathering dust or an early-generation Raspberry Pi in a drawer? Instead of throwing it away, you can onboard it to secure the Rustchain network and earn RTC passively. 
+Got an old laptop gathering dust or a legacy desktop in a drawer? Instead of throwing it away, you can onboard it to secure the Rustchain network and earn RTC passively. 
 
-Thanks to Rustchain’s unique consensus, vintage hardware is actively rewarded for its age. This step-by-step guide will take you from a dusty closet find to earning RTC in under 15 minutes.
+Thanks to Rustchain’s unique consensus, vintage hardware is actively rewarded for its architecture. This step-by-step guide will take you from a dusty closet find to earning RTC in under 15 minutes.
 
 ---
 
 ## 🧐 Does My Computer Qualify? (Quick Check)
 
 Before setting up, make sure your legacy device meets these basic requirements:
-* **CPU:** Any legacy x86 or ARM processor (Core 2 Duo, Pentium 4, Athlon 64, PowerPC G3/G4/G5, or Raspberry Pi 2+).
+* **CPU:** Legacy x86 or certified legacy architectures (Core 2 Duo, Pentium series, or PowerPC).
 * **RAM:** Minimum 512MB (1GB or more recommended).
 * **Network:** Working Wi-Fi or Ethernet connection to access the internet.
 * **OS:** Windows XP/7/10, Linux (Ubuntu/Debian-based), or legacy macOS.
 
-### The Antiquity Multiplier Scale
-Unlike traditional Proof-of-Work systems that favor raw power, Rustchain rewards hardware diversity. Older machines receive a multiplier applied to baseline attestation rewards:
+> ⚠️ **Important Anti-Farm Notice:** Modern single-board computers like the **Raspberry Pi** do not qualify as vintage hardware. To prevent bot-farms, modern ARM devices are subject to an anti-farm penalty baseline of **0.0005x**. Stick to authentic legacy desktop/laptop silicon for optimal earnings.
 
-| Era | CPU Examples | Antiquity Multiplier |
-| :--- | :--- | :--- |
-| **Ancient (1995-2005)** | Pentium 1-4, Athlon 64, PowerPC G3/G4 | `3.0x - 5.0x` |
-| **Classic (2006-2012)** | Core 2 Duo, 1st Gen Core i3/i5 | `2.0x - 3.0x` |
-| **Modern Vintage (2013-2015)** | Haswell / Skylake Architectures | `1.5x - 2.0x` |
-| **Modern (2016+)** | Current generation chips | `1.0x (Base)` |
+### Official Antiquity Multiplier Scale
+Unlike traditional Proof-of-Work systems that favor modern raw hashing power, Rustchain rewards hardware diversity. The exact multipliers configured in the network core (`node/rip_200_round_robin_1cpu1vote.py`) are detailed below:
+
+| Architecture / CPU | Antiquity Multiplier Status |
+| :--- | :--- |
+| **PowerPC G4 (Legacy Mac)** | `2.5x` Multiplier |
+| **Intel Core 2 Duo (Classic Era)** | `1.3x` Multiplier |
+| **Modern ARM (Raspberry Pi, etc.)** | `0.0005x` Anti-Farm Penalty |
+| **Standard Modern CPU (2016+)** | `1.0x` Baseline |
 
 ---
 
@@ -41,14 +43,3 @@ Rustchain analyzes timing characteristics and low-level jitter variance to prove
    cd C:\RustChain
    .\rustchain-miner.exe --fingerprint
    
----
-
-## 💡 Real-World Use Case Example
-
-**Scenario:** You have a 2010 Dell Inspiron laptop with an Intel Core 2 Duo processor that is no longer fast enough for daily web browsing or modern tasks. 
-
-1. Instead of sending it to e-waste, you install a lightweight Linux distribution (like Lubuntu) or keep its existing Windows 7 setup.
-2. Following this guide, you download the Rustchain miner and input your wallet destination.
-3. Because the Core 2 Duo triggers a **3.2x Antiquity Multiplier**, the laptop actively generates meaningful RTC tokens every single hour, running silently in the corner of your room on minimal power consumption. 
-4. This transforms obsolete, zero-value hardware into a passive utility worker for the network.
-
